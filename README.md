@@ -2,6 +2,8 @@
 
 ![Publish to Github Packages](https://github.com/meevilabs/react-native-elements/workflows/Publish%20to%20Github%20Packages/badge.svg?branch=master)
 
+[![codecov](https://codecov.io/gh/meevilabs/react-native-elements/branch/master/graph/badge.svg)](https://codecov.io/gh/meevilabs/react-native-elements)
+
 Welcome to the builder ui package here you will find out all of our components shared with the community
 
 # Whats the idea of this repository

@@ -11,10 +11,12 @@ module.exports = {
     'plugin:promise/recommended',
   ],
   parserOptions: {
-    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+    useJSXTextNode: true,
+    project: './tsconfig.json',
+    tsconfigRootDir: '.',
   },
   plugins: [
     '@typescript-eslint',
