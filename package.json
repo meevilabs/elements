@@ -1,0 +1,96 @@
+{
+  "name": "@meevilabs/react-native-elements",
+  "version": "0.0.1",
+  "description": "Meevi's React Native Elements Library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "@ammichael",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rm -rf ./node_modules && yarn install",
+    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "precommit": "yarn lint",
+    "preversion": "yarn lint",
+    "prepublish": "tsc",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "yarn lint",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=16.11",
+    "react-native": ">=0.61"
+  },
+  "dependencies": {
+    "@platformbuilders/helpers": "^0.0.2",
+    "lodash": "^4.17.15",
+    "lottie-react-native": "^3.3.2",
+    "polished": "^3.4.4",
+    "react-native-camera": "^3.19.0",
+    "react-native-checkbox": "^2.0.0",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-fast-image": "^7.0.2",
+    "react-native-haptic": "^1.0.1",
+    "react-native-image-picker": "^2.3.1",
+    "react-native-masked-text": "^1.13.0",
+    "react-native-size-matters": "^0.3.0",
+    "react-native-svg": "^11.0.1",
+    "react-native-typography": "^1.4.1",
+    "react-native-vector-icons": "^6.6.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@react-native-community/eslint-config": "^0.0.7",
+    "@types/lodash": "^4.14.149",
+    "@types/moment": "^2.13.0",
+    "@types/numeral": "^0.0.26",
+    "@types/react": "^16.9.19",
+    "@types/react-native": "^0.61.10",
+    "@types/react-native-check-box": "^2.1.0",
+    "@types/react-native-datepicker": "^1.7.0",
+    "@types/react-native-vector-icons": "^6.4.5",
+    "@types/styled-components": "^4.4.2",
+    "@types/yup": "^0.26.30",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-babel-module": "5.1.2",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-react-native": "^3.8.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "typescript": "^3.7.5"
+  }
+}

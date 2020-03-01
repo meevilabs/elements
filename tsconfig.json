@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ESNext",
+    "module": "commonjs",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "outDir": "dist",
+    "declaration": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "react-native",
+    "noEmit": false,
+    "skipLibCheck": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/svg": ["src/assets/svg"],
+      "~/images": ["src/assets/images"],
+      "~/components": ["src/components"],
+      "~/theme": ["src/theme"],
+      "~/types": ["src/utils/types"],
+      "~/hooks": ["src/utils/hooks"],
+      "~/modules": ["src/utils/modules"],
+      "~/helpers": ["src/utils/helpers"]
+    }
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules", // exclude test files
+    "dist"
+  ]
+}
