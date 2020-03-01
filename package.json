@@ -4,16 +4,30 @@
   "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "@ammichael",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meevilabs/react-native-elements.git"
+  },
+  "keywords": [
+    "meevi",
+    "react native",
+    "elements",
+    "ui"
+  ],
+  "author": "Michael Amaral <mike@meevi.dev>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meevilabs/react-native-elements/issues"
+  },
+  "homepage": "https://github.com/meevilabs/react-native-elements#readme",
   "private": false,
   "scripts": {
     "clean": "rm -rf ./node_modules && yarn install",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}' --fix",
+    "lint": "tsc && eslint 'src/**/*.{js,ts,tsx}' --fix",
     "precommit": "yarn lint",
     "preversion": "yarn lint",
     "prepublish": "tsc",
@@ -80,7 +94,7 @@
     "@typescript-eslint/parser": "^2.19.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-babel-module": "5.1.2",

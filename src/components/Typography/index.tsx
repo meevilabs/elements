@@ -11,16 +11,14 @@ const Typography: FC<TypographyType> = ({
   textRef = React.createRef(),
   children,
   ...rest
-}) => {
-  return (
-    <Text
-      ref={textRef}
-      style={[human[variant], { color: theme.primary.contrast }, style]}
-      {...rest}
-    >
-      {children}
-    </Text>
-  );
-};
+}) => (
+  <Text
+    ref={textRef}
+    style={[human[variant], { color: theme.primary.contrast }, style]}
+    {...rest}
+  >
+    {children}
+  </Text>
+);
 
 export default withTheme(Typography);

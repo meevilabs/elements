@@ -12,7 +12,7 @@ export const Wrapper = styled.View<WrapperProps>`
   background-color: ${getTheme('primary.light')};
   border-radius: 50px;
   overflow: hidden;
-  border: ${(props): any =>
+  border: ${(props: WrapperProps): any =>
     isSelected(`2px solid ${getTheme('outcome.light')(props)}`, '0')};
 `;
 

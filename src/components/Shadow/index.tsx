@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Wrapper } from './styles';
+
 interface Props {
   children: JSX.Element;
 }

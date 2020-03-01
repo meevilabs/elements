@@ -8,17 +8,15 @@ const MaskedTextInput: FC<MaskedTextInputType> = ({
   contrast = false,
   multiline = false,
   ...props
-}) => {
-  return (
-    <TextInput
-      {...props}
-      ref={inputRef}
-      contrast={contrast}
-      multiline={multiline}
-      type={maskType}
-      underlineColorAndroid="transparent"
-    />
-  );
-};
+}) => (
+  <TextInput
+    {...props}
+    ref={inputRef}
+    contrast={contrast}
+    multiline={multiline}
+    type={maskType}
+    underlineColorAndroid="transparent"
+  />
+);
 
 export default MaskedTextInput;

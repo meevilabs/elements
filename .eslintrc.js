@@ -2,22 +2,28 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb-typescript',
-    'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:sonarjs/recommended',
-    'plugin:promise/recommended'
+    'plugin:promise/recommended',
   ],
   parserOptions: {
-    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
-  plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'sonarjs', 'promise', 'import'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'jsx-a11y',
+    'sonarjs',
+    'promise',
+    'import',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -57,7 +63,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect'
-    }
-  }
+      version: 'detect',
+    },
+  },
 };

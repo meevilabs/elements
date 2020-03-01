@@ -1,4 +1,5 @@
-/* eslint-disable max-classes-per-file */
+/* eslint-disable */
+
 declare module 'react-native-simple-dialogs' {
   import * as React from 'react';
   import {
