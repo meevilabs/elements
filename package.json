@@ -26,7 +26,6 @@
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "lint": "tsc && eslint 'src/**/*.{js,ts,tsx}' --fix",
     "test": "jest",
-    "preversion": "yarn lint",
     "prepublish": "tsc",
     "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
@@ -52,7 +51,7 @@
     "react-native": ">=0.61"
   },
   "dependencies": {
-    "@platformbuilders/helpers": "^0.0.11",
+    "@platformbuilders/helpers": "^0.0.18",
     "@types/react-native-actionsheet": "^2.4.1",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
@@ -76,8 +75,6 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "react": "^16.12.0",
-    "react-native": "^0.61.5",
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/runtime": "^7.8.4",
@@ -122,6 +119,8 @@
     "jest": "^25.1.0",
     "jest-environment-node": "^25.1.0",
     "lint-staged": "^10.0.7",
+    "react": "^16.12.0",
+    "react-native": "^0.61.5",
     "ts-jest": "^25.2.1",
     "typescript": "^3.7.5"
   }

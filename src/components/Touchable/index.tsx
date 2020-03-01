@@ -22,7 +22,6 @@ const CommonTouchable: FC<TouchableType> = ({
   children,
   onPress,
   haptic = 'impact',
-  sound = false,
   disabled = false,
   style = [{}],
   hitSlop = {
