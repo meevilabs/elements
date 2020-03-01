@@ -1,4 +1,4 @@
-# Welcome to Meevi's React Native Elements
+# Welcome to @meevi/react-native-elements
 
 Welcome to the builder ui package here you will find out all of our components shared with the community
 
@@ -12,5 +12,20 @@ Right now it's under early development stage, so hope it won't be a walk in the 
 
 Here's how you add our dependencie to your project @meevilabs/react-native-elements
 
-1. `yarn add @meevilabs/react-native-elements`
-2. You can use it on your projects
+1. create a `.yarnrc` file and add this:
+
+```
+"@meevilabs:registry" "https://npm.pkg.github.com"
+```
+
+2. then depend on it:
+
+```
+yarn add @meevilabs/react-native-elements
+```
+
+3. import it:
+
+```
+import { Button } from '@meevilabs/react-native-elements'
+```

@@ -1,7 +1,7 @@
 {
   "name": "@meevilabs/react-native-elements",
   "version": "0.0.1",
-  "description": "Meevi's React Native Elements Library",
+  "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "@ammichael",
@@ -13,7 +13,7 @@
   "scripts": {
     "clean": "rm -rf ./node_modules && yarn install",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --fix",
     "precommit": "yarn lint",
     "preversion": "yarn lint",
     "prepublish": "tsc",
