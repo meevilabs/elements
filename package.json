@@ -4,9 +4,6 @@
   "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meevilabs/react-native-elements.git"
@@ -55,7 +52,7 @@
     "react-native": ">=0.61"
   },
   "dependencies": {
-    "@platformbuilders/helpers": "^0.0.2",
+    "@platformbuilders/helpers": "^0.0.11",
     "@types/react-native-actionsheet": "^2.4.1",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
