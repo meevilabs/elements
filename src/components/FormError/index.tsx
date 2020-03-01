@@ -1,24 +1,17 @@
-import React, { FC, useContext } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React, { FC, ReactNode } from 'react';
+import { FormError as FormErrorType } from '~/types';
 import { ErrorText } from './styles';
-import { ThemeContext } from '../ThemeContext';
 
-type Props = {
-  error: string | boolean | undefined;
-  children?: JSX.Element | JSX.Element[];
-  style?: object[];
-};
+interface Props {
+  children: ReactNode;
+  error?: FormErrorType;
+}
 
-const FormError: FC<Props> = ({ error = '', children, style }) => {
-  const { theme } = useContext(ThemeContext);
-  return (
-    <ThemeProvider theme={theme}>
-      <>
-        {children}
-        <ErrorText style={style}>{error}</ErrorText>
-      </>
-    </ThemeProvider>
-  );
-};
+const FormError: FC<Props> = ({ error = '', children }) => (
+  <>
+    {children}
+    <ErrorText>{error}</ErrorText>
+  </>
+);
 
 export default FormError;

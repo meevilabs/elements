@@ -1,4 +1,8 @@
-import { TextInputMaskTypeProp } from 'react-native-masked-text';
+import {
+  TextInputMaskTypeProp,
+  TextInputMaskOptionProp,
+} from 'react-native-masked-text';
+import { FormError } from './FormError';
 
 type KeyboardType =
   | 'default'
@@ -32,13 +36,13 @@ type ReturnKeyType =
   | 'emergency-call'
   | undefined;
 
-type MaskedInput = {
-  maskType: TextInputMaskTypeProp;
-};
-export interface TextInput {
+export interface Input {
   id?: string;
+  inputRef?: any;
   accessibility?: string;
-  dark?: boolean;
+  borderless?: boolean;
+  contrast?: boolean;
+  big?: boolean;
   multiline?: boolean;
   secureTextEntry?: boolean;
   autoComplete?: string;
@@ -48,22 +52,25 @@ export interface TextInput {
   iconSize?: number;
   iconTouchableEnabled?: boolean;
   label?: string;
-  value?: string;
+  value?: any;
   placeholder?: string;
-  iconName?: string | null;
+  iconName?: string;
   maskType?: TextInputMaskTypeProp | null;
+  options?: TextInputMaskOptionProp;
   status?: string;
-  error?: string | boolean;
+  error?: FormError;
   iconHitSlop?: object;
   style?: any;
   textStyle?: any;
   labelStyle?: any;
   isPlaceholder?: boolean;
-  onPressIcon?(x?: any): void;
-  onBlur?(x?: any): void;
-  onFocus?(x?: any): void;
-  onChangeText?(x?: any): void;
-  onSubmitEditing?(x?: any): void;
+  onPressIcon?(value?: any): void;
+  onBlur?(value?: any): void;
+  onFocus?(value?: any): void;
+  onChangeText?(value?: any): void;
 }
 
-export type MaskedTextInput = TextInput & MaskedInput;
+export interface MaskedInput extends Input {
+  maskType: TextInputMaskTypeProp;
+  options?: TextInputMaskOptionProp;
+}

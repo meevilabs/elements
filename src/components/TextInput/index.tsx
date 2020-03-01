@@ -1,10 +1,9 @@
-import React, { FC, useState, useEffect, useCallback, useContext } from 'react';
+import React, { FC, useState, useEffect, useCallback } from 'react';
 import { Animated, TextInputProps as RNTextInputProps } from 'react-native';
 import { isEmpty } from 'lodash';
-import { ThemeProvider } from 'styled-components';
 import { colors } from '~/theme';
 import { usePrevious } from '~/hooks';
-import { TextInput as TextInputType, InputStatus } from '~/types';
+import { Input as TextInputType, InputStatus } from '~/types';
 import MaskedTextInput from './MaskedTextInput';
 import {
   Label,
@@ -17,27 +16,28 @@ import {
 } from './styles';
 import Icon from '../Icon';
 import FormError from '../FormError';
-import { ThemeContext } from '../ThemeContext';
 
 type Props = TextInputType & RNTextInputProps;
 
 const AnimatedTextInput: FC<Props> = ({
-  dark = false,
+  big = false,
+  contrast = false,
+  borderless = false,
   multiline = false,
   keyboardType = 'default',
   iconSize = 20,
   iconTouchableEnabled = false,
-  status = InputStatus.DEFAULT,
-  iconName = null,
+  status = InputStatus.Default,
   maskType = null,
+  iconName = '',
   label = '',
   value = '',
   placeholder = '',
   error = '',
   style = {},
   textStyle = {},
-  labelStyle = {},
   iconHitSlop = {},
+  inputRef = React.createRef(),
   onBlur = (): any => {},
   onFocus = (): any => {},
   onChangeText = (): any => {},
@@ -49,7 +49,6 @@ const AnimatedTextInput: FC<Props> = ({
     top: new Animated.Value(LABEL_LOWER_STYLE.top),
     fontSize: new Animated.Value(LABEL_LOWER_STYLE.fontSize),
   });
-  const { theme } = useContext(ThemeContext);
 
   const [isPlaceholder, setIsPlaceHolder] = useState(true);
 
@@ -87,19 +86,19 @@ const AnimatedTextInput: FC<Props> = ({
       setIsPlaceHolder(false);
       animationUp();
     }
-    if (onFocus) {
-      onFocus();
-    }
+    onFocus();
   };
 
   const handleOnBlur = (): void => {
-    if (!value) {
+    const isEmptyLabel = label === '';
+    if (!value && !isEmptyLabel) {
       setIsPlaceHolder(true);
       animationDown();
     }
-    if (onBlur) {
-      onBlur();
+    if (isEmptyLabel) {
+      setIsPlaceHolder(false);
     }
+    onBlur();
   };
 
   const renderTextInput = (inputStatus: string): JSX.Element => {
@@ -107,7 +106,9 @@ const AnimatedTextInput: FC<Props> = ({
 
     const textInputProps = {
       ...rest,
-      dark,
+      big,
+      contrast,
+      borderless,
       multiline,
       value,
       keyboardType,
@@ -121,19 +122,25 @@ const AnimatedTextInput: FC<Props> = ({
     };
 
     return maskType ? (
-      <MaskedTextInput maskType={maskType} {...textInputProps} />
+      <MaskedTextInput
+        inputRef={inputRef}
+        maskType={maskType}
+        {...textInputProps}
+      />
     ) : (
-      <TextInput {...textInputProps} />
+      <TextInput ref={inputRef} {...textInputProps} />
     );
   };
 
   const previousValue = usePrevious<string>(value || '');
 
   useEffect(() => {
-    // eslint-disable-next-line prettier/prettier
     const wasEmpty = previousValue?.length === 0;
     if (value && value.length && wasEmpty) {
       animationUp();
+    }
+    if (label === '') {
+      setIsPlaceHolder(false);
     }
   }, [value, previousValue]);
 
@@ -141,37 +148,35 @@ const AnimatedTextInput: FC<Props> = ({
 
   const icon = iconName;
   const iconColor = getIconColor(hasError);
-  const renderStatus = hasError ? InputStatus.FAILURE : status;
+  const renderStatus = hasError ? InputStatus.Failure : status;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Wrapper style={style} multiline={multiline}>
-        <FormError error={error}>
-          <Label
-            status={status}
-            style={[labelStyle, labelAnimatedStyle]}
-            dark={dark}
-            isPlaceholder={isPlaceholder}
-          >
-            {label}
-          </Label>
-          <InputAreaWrapper multiline={multiline}>
-            {renderTextInput(renderStatus)}
-            {!isEmpty(icon) && (
-              <Icon
-                size={iconSize}
-                name={icon || ''}
-                color={iconColor}
-                touchable={iconTouchableEnabled}
-                onPress={onPressIcon}
-                hitSlop={iconHitSlop}
-              />
-            )}
-          </InputAreaWrapper>
-          <BottomLine dark={dark} status={status} />
-        </FormError>
-      </Wrapper>
-    </ThemeProvider>
+    <Wrapper style={style} multiline={multiline}>
+      <FormError error={error}>
+        <Label
+          status={status}
+          contrast={contrast}
+          style={labelAnimatedStyle}
+          isPlaceholder={isPlaceholder}
+        >
+          {label}
+        </Label>
+        <InputAreaWrapper multiline={multiline}>
+          {renderTextInput(renderStatus)}
+          {!isEmpty(icon) ? (
+            <Icon
+              size={iconSize}
+              name={icon}
+              color={iconColor}
+              touchable={iconTouchableEnabled}
+              onPress={onPressIcon}
+              hitSlop={iconHitSlop}
+            />
+          ) : null}
+        </InputAreaWrapper>
+        {!borderless && <BottomLine status={status} contrast={contrast} />}
+      </FormError>
+    </Wrapper>
   );
 };
 

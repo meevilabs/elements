@@ -1,67 +1,79 @@
-import React, { FC } from 'react';
+import React, { PureComponent } from 'react';
 import { Animated, View } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Touchable from '../Touchable';
+import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
+import { IconSets } from '~/types';
+import { Touchable } from '~/components';
 import * as Icons from '~/svg';
 
-type Props = {
+interface Props {
   name: string;
+  onPress?(): void;
   touchable?: boolean;
   size?: number;
-  accessibility?: string;
   color?: string;
-  style?: any;
-  onPress?(): void;
+  iconSet?: IconSets;
   borderColor?: string;
   backgroundColor?: string;
+  style?: object[];
   hitSlop?: {
     top?: number;
     bottom?: number;
     left?: number;
     right?: number;
   };
-};
+}
 
-export const Icon: FC<Props> = ({
-  name,
-  accessibility,
-  touchable = true,
-  size = 20,
-  color = undefined,
-  style = [{}],
-  onPress = (): void => {},
-  borderColor = '',
-  backgroundColor = '',
-  ...rest
-}) => {
-  // eslint-disable-next-line prettier/prettier
-  const iconName = name?.charAt(0).toUpperCase() + name?.slice(1);
-  const Svg = Icons[`Icon${iconName}`];
+export default class Icon extends PureComponent<Props> {
+  renderIconSet = (): JSX.Element => {
+    const { iconSet = 'material', name, size, color } = this.props;
+    let IconSet;
+    switch (iconSet) {
+      case 'material':
+        IconSet = MaterialIcons;
+        break;
+      case 'fontAwesome':
+        IconSet = FontAwesomeIcons;
+        break;
+      default:
+        IconSet = MaterialIcons;
+        break;
+    }
+    return <IconSet name={name} size={size} color={color} />;
+  };
 
-  return (
-    <Animated.View style={style}>
-      <Touchable
-        accessibility={accessibility || iconName}
-        disabled={!touchable}
-        onPress={onPress}
-        {...rest}
-      >
-        <View>
-          {Svg ? (
-            <Svg
-              width={size}
-              height={size}
-              color={color}
-              borderColor={borderColor}
-              backgroundColor={backgroundColor}
-            />
-          ) : (
-            <MaterialIcons name={name} color={color} size={size} />
-          )}
-        </View>
-      </Touchable>
-    </Animated.View>
-  );
-};
-
-export default Icon;
+  render(): JSX.Element {
+    const {
+      name,
+      onPress = (): void => {},
+      size = 20,
+      style = {},
+      touchable = true,
+      color = undefined,
+      borderColor = '',
+      backgroundColor = '',
+      ...rest
+    } = this.props;
+    const iconName = name.charAt(0).toUpperCase() + name.slice(1);
+    const Svg = Icons[`Icon${iconName}`];
+    return (
+      <Animated.View style={style}>
+        <Touchable disabled={!touchable} onPress={onPress} {...rest}>
+          <View>
+            {Svg ? (
+              <Svg
+                width={size}
+                height={size}
+                color={color}
+                borderColor={borderColor}
+                backgroundColor={backgroundColor}
+              />
+            ) : (
+              this.renderIconSet()
+            )}
+          </View>
+        </Touchable>
+      </Animated.View>
+    );
+  }
+}

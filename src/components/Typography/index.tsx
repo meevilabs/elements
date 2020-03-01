@@ -1,37 +1,35 @@
-import React, { FC, useContext } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React, { FC } from 'react';
 import { human } from 'react-native-typography';
-import { Theme, Variants } from '~/types';
+import { FormikErrors } from 'formik';
+import { withTheme } from 'styled-components';
+import { Theme, Metrics, Variants } from '~/types';
 import { Text } from './styles';
-import { ThemeContext } from '../ThemeContext';
 
 interface Props {
   variant?: Variants;
-  children?: string | string[] | (string | JSX.Element)[];
-  style?: object[];
+  children?: string | string[] | FormikErrors<any> | FormikErrors<any>[];
+  style?: any;
   textRef?: any;
-  theme: Theme;
+  theme: Theme & Metrics;
 }
 
 const Typography: FC<Props> = ({
-  style = [{}],
+  theme,
+  style = {},
   variant = 'body',
   textRef = React.createRef(),
   children,
   ...rest
 }) => {
-  const { theme } = useContext(ThemeContext);
   return (
-    <ThemeProvider theme={theme}>
-      <Text
-        ref={textRef}
-        style={[human[variant], { color: theme.primary.contrast }, style]}
-        {...rest}
-      >
-        {children}
-      </Text>
-    </ThemeProvider>
+    <Text
+      ref={textRef}
+      style={[human[variant], { color: theme.primary.contrast }, style]}
+      {...rest}
+    >
+      {children}
+    </Text>
   );
 };
 
-export default Typography;
+export default withTheme(Typography);
