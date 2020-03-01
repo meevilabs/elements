@@ -1,0 +1,27 @@
+name: Publish to Github Packages
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  checking:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: borales/actions-yarn@v2.1.0
+        with:
+          auth-token: ${{ secrets.GPR_ACCESS_TOKEN }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: meevilabs
+          cmd: version
+      - name: Create NPMRC
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GPR_ACCESS_TOKEN }}" > ~/.npmrc
+      - name: Install & Build
+        run: yarn install && tsc
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
