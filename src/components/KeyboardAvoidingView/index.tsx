@@ -1,19 +1,11 @@
 import React, { FC } from 'react';
 import { KeyboardAvoidingView as Wrapper } from 'react-native';
+import { KeyboardAvoiding as KeyboardAvoidingTypes } from '~/types';
 import { isIOS } from '~/helpers';
 
-type Behavior = 'height' | 'position' | 'padding' | undefined;
+const defaultBehavior = isIOS() ? 'padding' : undefined;
 
-interface Props {
-  behavior?: Behavior;
-  enabled?: boolean;
-  keyboardOffset?: number;
-  style?: any;
-}
-
-const defaultBehavior: Behavior = isIOS() ? 'padding' : undefined;
-
-const KeyboardAvoidingView: FC<Props> = ({
+const KeyboardAvoidingView: FC<KeyboardAvoidingTypes> = ({
   children,
   behavior = defaultBehavior,
   keyboardOffset = 0,
@@ -23,7 +15,7 @@ const KeyboardAvoidingView: FC<Props> = ({
   <Wrapper
     style={style}
     behavior={behavior}
-    enabled={true}
+    enabled
     keyboardVerticalOffset={keyboardOffset}
     {...rest}
   >

@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import FastImage from 'react-native-fast-image';
 import { Touchable } from '~/components';
 
 interface WrapperProps {
@@ -13,7 +12,7 @@ export const Wrapper = styled(Touchable)<WrapperProps>`
   overflow: hidden;
 `;
 
-export const Image = styled(FastImage).attrs({ resizeMode: 'cover' })`
+export const Image = styled.Image.attrs({ resizeMode: 'cover' })`
   width: 100%;
   height: 100%;
 `;

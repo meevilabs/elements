@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { HapticFeedbackType } from 'react-native-haptic';
+import { Touchable as TouchableType } from '~/types';
 import { generateHaptic } from '~/helpers';
 import { Wrapper, TouchAnimation } from './styles';
 
@@ -18,22 +18,7 @@ const resetTouchableStyle = {
   borderWidth: 0,
 };
 
-interface Props {
-  children: JSX.Element | JSX.Element[] | string | string[];
-  onPress(arg?: any): any;
-  sound?: boolean;
-  disabled?: boolean;
-  haptic?: HapticFeedbackType;
-  style?: any;
-  hitSlop?: {
-    top?: number;
-    bottom?: number;
-    left?: number;
-    right?: number;
-  };
-}
-
-const CommonTouchable: FC<Props> = ({
+const CommonTouchable: FC<TouchableType> = ({
   children,
   onPress,
   haptic = 'impact',
