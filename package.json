@@ -22,7 +22,6 @@
   "private": false,
   "scripts": {
     "clean": "rm -rf ./node_modules && yarn install",
-    "pack:test": "rm -rf dist && tsc && npm pack",
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "lint": "tsc && eslint 'src/**/*.{js,ts,tsx}' --fix",
     "test": "jest",
@@ -37,8 +36,6 @@
     "*.js": [
       "yarn pretty",
       "yarn lint",
-      "yarn test",
-      "yarn coverage",
       "git add ."
     ]
   },
