@@ -3,7 +3,7 @@ import { Animated, View } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
 import { IconSets } from '../../utils/types';
-import { Touchable } from '..';
+import Touchable from '../Touchable';
 import * as Icons from '../../assets/svg';
 
 interface Props {

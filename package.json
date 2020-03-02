@@ -10,9 +10,8 @@
   },
   "keywords": [
     "meevi",
-    "react native",
-    "elements",
-    "ui"
+    "react-native",
+    "react-native-elements"
   ],
   "author": "Michael Amaral <mike@meevi.dev>",
   "license": "MIT",
