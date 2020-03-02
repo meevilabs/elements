@@ -9,7 +9,10 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "dist",
+    "importHelpers": true,
+    "resolveJsonModule": true,
     "jsx": "react-native",
+    "baseUrl": ".",
     // "noEmit": false,
     "skipLibCheck": true,
     /* Strict Type-Checking Options */

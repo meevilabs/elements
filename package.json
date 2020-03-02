@@ -26,7 +26,7 @@
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
     "lint": "tsc && eslint 'src/**/*.{js,ts,tsx}' --fix",
     "test": "jest",
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "prepublish": "yarn build",
     "postversion": "git push && git push --tags",
     "version:patch": "npm version patch",
@@ -73,7 +73,8 @@
     "react-native-typography": "^1.4.1",
     "react-native-vector-icons": "^6.6.0",
     "react-spring": "^8.0.27",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "tslib": "^1.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
