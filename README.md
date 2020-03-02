@@ -6,13 +6,15 @@
 [![MIT][license-badge]][license]
 
 [npm-badge]: https://img.shields.io/npm/v/@meevilabs/react-native-elements.svg
+[npm]: https://www.npmjs.com/package/@meevilabs/react-native-elements
+[rn]: https://facebook.github.io/react-native
 [rn-badge]: https://img.shields.io/badge/react--native-v0.61-05A5D1.svg
 [license-badge]: https://img.shields.io/dub/l/vibe-d.svg
 [license]: https://raw.githubusercontent.com/meevilabs/react-native-element/master/LICENSE.md
 [workflows]: https://github.com/meevilabs/react-native-elements/actions
 [check-badge]: https://github.com/meevilabs/react-native-elements/workflows/check/badge.svg
 
-Welcome to the builder ui package here you will find out all of our components shared with the community
+Welcome to the Meevi React Native Elements package. Here you will find out all of our UI (or not so UI) components used between most of our projects. They are very opinionated, suited to our workflow, but they can be very useful in most projects as well.
 
 # Whats the idea of this repository
 
