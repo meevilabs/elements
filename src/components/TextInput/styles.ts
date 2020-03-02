@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Animated } from 'react-native';
-import { ifStyle, switchStyle, getTheme } from '~/helpers';
-import { Input as TextInputType, InputStatus } from '~/types';
+import { ifStyle, switchStyle, getTheme } from '../../utils/helpers';
+import { Input as TextInputType, InputStatus } from '../../utils/types';
 
 interface InputAreaWrapperProps {
   multiline: boolean;

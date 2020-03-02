@@ -1,9 +1,9 @@
 import React, { FC, useState, useEffect, useCallback } from 'react';
 import { Animated, TextInputProps as RNTextInputProps } from 'react-native';
 import { isEmpty } from 'lodash';
-import { colors } from '~/theme';
-import { usePrevious } from '~/hooks';
-import { Input as TextInputType, InputStatus } from '~/types';
+import { colors } from '../../theme';
+import { usePrevious } from '../../utils/hooks';
+import { Input as TextInputType, InputStatus } from '../../utils/types';
 import MaskedTextInput from './MaskedTextInput';
 import {
   Label,

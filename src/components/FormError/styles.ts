@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import { Typography } from '~/components';
-import { getTheme } from '~/helpers';
+import { Typography } from '..';
+import { getTheme } from '../../utils/helpers';
 
 export const ErrorText = styled(Typography)`
   min-height: 17px;

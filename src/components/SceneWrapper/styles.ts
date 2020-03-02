@@ -4,7 +4,7 @@ import {
   getBottomSpace,
   isIphoneX,
 } from 'react-native-iphone-x-helper';
-import { getTheme, ifStyle } from '~/helpers';
+import { getTheme, ifStyle } from '../../utils/helpers';
 
 const extraPadding = isIphoneX() ? 10 : 0;
 const statusBarHeight = getStatusBarHeight();

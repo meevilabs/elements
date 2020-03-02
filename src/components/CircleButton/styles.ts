@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import { Touchable, Icon as IconComponent } from '~/components';
-import { getTheme, ifStyle } from '~/helpers';
+import { Touchable, Icon as IconComponent } from '..';
+import { getTheme, ifStyle } from '../../utils/helpers';
 
 const isSelected = ifStyle('isSelected');
 

@@ -25,22 +25,11 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "experimentalDecorators": true,
     /* Module Resolution Options */
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/svg": ["src/assets/svg"],
-      "~/images": ["src/assets/images"],
-      "~/components": ["src/components"],
-      "~/theme": ["src/theme"],
-      "~/types": ["src/utils/types"],
-      "~/hooks": ["src/utils/hooks"],
-      "~/modules": ["src/utils/modules"],
-      "~/helpers": ["src/utils/helpers"]
-    }
+    "baseUrl": "."
   },
   "include": ["src"],
   "exclude": [

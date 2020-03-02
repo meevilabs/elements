@@ -3,8 +3,8 @@ import {
   Typography,
   Touchable as TouchableComponent,
   Icon as DefaultIcon,
-} from '~/components';
-import { getTheme } from '~/helpers';
+} from '..';
+import { getTheme } from '../../utils/helpers';
 
 const smallSpacing = getTheme('smallSpacing');
 const mediumSpacing = getTheme('mediumSpacing');

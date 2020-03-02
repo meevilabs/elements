@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { getTheme, ifStyle } from '~/helpers';
-import { Touchable, Typography, Icon } from '~/components';
+import { getTheme, ifStyle } from '../../utils/helpers';
+import { Touchable, Typography, Icon } from '..';
 
 const smallIconSize = 24;
 const bigIconSize = 30;

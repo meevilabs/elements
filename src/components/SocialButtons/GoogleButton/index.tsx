@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components/native';
-import { Button } from '~/components';
+import { Button } from '../..';
 
 const Wrapper = styled(Button).attrs({ sound: true })`
   background-color: #dd2a27;

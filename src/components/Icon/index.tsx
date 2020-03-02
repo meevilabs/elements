@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 import { Animated, View } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
-import { IconSets } from '~/types';
-import { Touchable } from '~/components';
-import * as Icons from '~/svg';
+import { IconSets } from '../../utils/types';
+import { Touchable } from '..';
+import * as Icons from '../../assets/svg';
 
 interface Props {
   name: string;

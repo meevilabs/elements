@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Spring, config as springConfig } from 'react-spring/renderprops';
-import { LoadingIndicator } from '~/components';
-import { IconSets } from '~/types';
+import { LoadingIndicator } from '..';
+import { IconSets } from '../../utils/types';
 import { Wrapper, Touch, Icon } from './styles';
 
 const bigSize = 70;

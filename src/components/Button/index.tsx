@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { LoadingIndicator } from '~/components';
-import { isIOS } from '~/helpers';
+import { LoadingIndicator } from '..';
+import { isIOS } from '../../utils/helpers';
 import { Icon, Touchable, ButtonWrapper, ButtonText } from './styles';
 
 const shadowStyle = {

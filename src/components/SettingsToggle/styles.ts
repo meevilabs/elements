@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import { Switch } from 'react-native';
-import { Typography } from '~/components';
-import { getTheme } from '~/helpers';
+import { Typography } from '..';
+import { getTheme } from '../../utils/helpers';
 
 const labelColor = getTheme('primary.contrast');
 const toggleColors = getTheme('outcome.light');

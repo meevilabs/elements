@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import { Typography, Icon as DefaultIcon } from '~/components';
-import { getTheme } from '~/helpers';
+import { Typography, Icon as DefaultIcon } from '..';
+import { getTheme } from '../../utils/helpers';
 
 const mediumSpacing = getTheme('mediumSpacing');
 const baseRadius = getTheme('baseRadius');

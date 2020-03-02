@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { DismissKeyboardView } from '~/components';
+import { DismissKeyboardView } from '..';
 import { ChildrenWrapper } from './styles';
 
 interface Props {

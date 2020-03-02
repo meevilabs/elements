@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Touchable } from '~/components';
+import { Touchable } from '..';
 
 interface WrapperProps {
   size: number;

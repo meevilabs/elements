@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import { getTheme } from '~/helpers';
-import { Touchable, Typography, Icon } from '~/components';
+import { getTheme } from '../../utils/helpers';
+import { Touchable, Typography, Icon } from '..';
 
 const smallSpacing = getTheme('smallSpacing');
 
