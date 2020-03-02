@@ -2,16 +2,18 @@
   "compilerOptions": {
     /* Basic Options */
     "target": "es6",
-    "module": "commonjs",
-    "lib": ["es2017", "es7", "es6"],
+    "module": "es6",
+    "lib": ["es6"],
     "types": ["react-native", "jest"],
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "dist",
+    "importHelpers": true,
     "resolveJsonModule": true,
     "jsx": "react-native",
-    "noEmit": false,
+    "baseUrl": ".",
+    // "noEmit": false,
     "skipLibCheck": true,
     /* Strict Type-Checking Options */
     "strict": true,
@@ -30,8 +32,7 @@
     /* Module Resolution Options */
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "baseUrl": "."
+    "esModuleInterop": true
   },
   "compileOnSave": true,
   "include": ["src"],
