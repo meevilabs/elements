@@ -27,7 +27,7 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/assets/**',
     '!src/theme/**',
-    '!src/utils/types/**',
+    '!src/types/**',
     '!src/**/styles.ts',
   ],
   moduleDirectories: ['node_modules', '<rootDir>'],

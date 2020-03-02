@@ -1,4 +1,4 @@
-# Welcome to @meevi/react-native-elements
+# Welcome to @meevilabs/react-native-elements
 
 [![Build Status][check-badge]][workflows]
 [![npm][npm-badge]][npm]

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Touchable } from '..';
-import { Variants } from '../../utils/types';
+import Touchable from '../Touchable';
+import { Variants } from '../../types';
 import { Text } from './styles';
 
 interface Props {

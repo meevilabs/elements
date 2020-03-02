@@ -8,5 +8,6 @@ export { HapticFeedback } from './HapticFeedback';
 export { InputStatus } from './InputStatus';
 export { Typography } from './Typography';
 export { Touchable } from './Touchable';
+export { ButtonType } from './ButtonType';
 export { KeyboardAvoiding } from './KeyboardAvoiding';
 export { Input, MaskedInput } from './Input';

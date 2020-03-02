@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
-import { Touchable, Typography } from '..';
-import { getTheme, ifStyle } from '../../utils/helpers';
+import Touchable from '../Touchable';
+import Typography from '../Typography';
+import { getTheme, ifStyle } from '../../helpers';
 
 const isSelected = ifStyle('isSelected');
 const primaryContrast = getTheme('primary.contrast');

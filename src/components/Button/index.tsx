@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import LoadingIndicator from '../LoadingIndicator';
-import { isIOS } from '../../utils/helpers';
+import { isIOS } from '../../helpers';
+import { ButtonType } from '../../types';
 import { Icon, Touchable, ButtonWrapper, ButtonText } from './styles';
 
 const shadowStyle = {
@@ -11,24 +12,7 @@ const shadowStyle = {
   elevation: 2,
 };
 
-interface Props {
-  children: string;
-  disabled?: boolean;
-  rounded?: boolean;
-  secondary?: boolean;
-  tertiary?: boolean;
-  loading?: boolean;
-  sound?: boolean;
-  active?: boolean;
-  style?: object[];
-  textStyle?: object | object[];
-  onPress?(): void;
-  iconSize?: number;
-  icon?: string;
-  iconColor?: string;
-}
-
-const Button: FC<Props> = ({
+const Button: FC<ButtonType> = ({
   style = {},
   children = '',
   textStyle = {},

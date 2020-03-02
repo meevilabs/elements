@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { KeyboardAvoidingView as Wrapper } from 'react-native';
-import { KeyboardAvoiding as KeyboardAvoidingTypes } from '../../utils/types';
-import { isIOS } from '../../utils/helpers';
+import { KeyboardAvoiding as KeyboardAvoidingTypes } from '../../types';
+import { isIOS } from '../../helpers';
 
 const defaultBehavior = isIOS() ? 'padding' : undefined;
 

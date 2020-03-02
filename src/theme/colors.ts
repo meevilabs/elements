@@ -1,5 +1,5 @@
 import { lighten, darken } from 'polished';
-import { Colors } from '../utils/types';
+import { Colors } from '../types';
 
 const primary = '#C6B09E';
 const secondary = '#805281';

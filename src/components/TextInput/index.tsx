@@ -2,9 +2,9 @@ import React, { FC, useState, useEffect, useCallback } from 'react';
 import { Animated, TextInputProps as RNTextInputProps } from 'react-native';
 import { isEmpty } from 'lodash';
 import { colors } from '../../theme';
-import { usePrevious } from '../../utils/hooks';
-import { Input as TextInputType, InputStatus } from '../../utils/types';
-import MaskedTextInput from './MaskedTextInput';
+import { usePrevious } from '../../hooks';
+import { Input as TextInputType, InputStatus } from '../../types';
+import MaskedInput from './MaskedInput';
 import {
   Label,
   Wrapper,
@@ -122,7 +122,7 @@ const AnimatedTextInput: FC<Props> = ({
     };
 
     return maskType ? (
-      <MaskedTextInput
+      <MaskedInput
         inputRef={inputRef}
         maskType={maskType}
         {...textInputProps}

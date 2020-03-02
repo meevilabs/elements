@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import TouchableComponent from '../Touchable';
 import DefaultIcon from '../Icon';
 import Typography from '../Typography';
-import { getTheme } from '../../utils/helpers';
+import { getTheme } from '../../helpers';
 
 const smallSpacing = getTheme('smallSpacing');
 const mediumSpacing = getTheme('mediumSpacing');

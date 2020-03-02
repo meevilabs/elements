@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { Touchable, Typography, Icon as DefaultIcon } from '..';
-import { getTheme, ifStyle } from '../../utils/helpers';
+import Touchable from '../Touchable';
+import Typography from '../Typography';
+import DefaultIcon from '../Icon';
+import { getTheme, ifStyle } from '../../helpers';
 
 const primaryContrast = getTheme('primary.contrast');
 const isDisabled = ifStyle('isDisabled');
