@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Typography } from '..';
+import Typography from '../Typography';
 import { getTheme } from '../../utils/helpers';
 
 export const ErrorText = styled(Typography)`

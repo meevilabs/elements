@@ -62,6 +62,7 @@ buck-out/
 
 # dist
 /dist
+package-lock.json
 
 # Android builds
 *.apk

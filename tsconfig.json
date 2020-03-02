@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "ESNext",
+    "target": "es6",
     "module": "commonjs",
-    "lib": ["es2017", "es7", "es6", "dom"],
+    "lib": ["es2017", "es7", "es6"],
+    "types": ["react-native", "jest"],
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "outDir": "dist",
-    "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "react-native",
     "noEmit": false,
@@ -31,6 +33,7 @@
     "esModuleInterop": true,
     "baseUrl": "."
   },
+  "compileOnSave": true,
   "include": ["src"],
   "exclude": [
     "node_modules", // exclude test files

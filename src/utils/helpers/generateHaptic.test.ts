@@ -1,6 +1,6 @@
-import { generateHaptic } from './haptic';
+import { generateHaptic } from './generateHaptic';
 
-describe('Haptic', () => {
+describe('generateHaptic', () => {
   it('should call Haptic.generate if is iOS', () => {
     // given
     // when

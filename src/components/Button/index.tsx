@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { LoadingIndicator } from '..';
+import LoadingIndicator from '../LoadingIndicator';
 import { isIOS } from '../../utils/helpers';
 import { Icon, Touchable, ButtonWrapper, ButtonText } from './styles';
 

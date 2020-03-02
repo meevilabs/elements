@@ -1,8 +1,16 @@
 # Welcome to @meevi/react-native-elements
 
-![npm](https://img.shields.io/npm/v/@meevilabs/react-native-elements)
+[![Build Status][check-badge]][workflows]
+[![npm][npm-badge]][npm]
+[![react-native][rn-badge]][rn]
+[![MIT][license-badge]][license]
 
-[![codecov](https://codecov.io/gh/meevilabs/react-native-elements/branch/master/graph/badge.svg)](https://codecov.io/gh/meevilabs/react-native-elements)
+[npm-badge]: https://img.shields.io/npm/v/@meevilabs/react-native-elements.svg
+[rn-badge]: https://img.shields.io/badge/react--native-v0.61-05A5D1.svg
+[license-badge]: https://img.shields.io/dub/l/vibe-d.svg
+[license]: https://raw.githubusercontent.com/meevilabs/react-native-element/master/LICENSE.md
+[workflows]: https://github.com/meevilabs/react-native-elements/actions
+[check-badge]: https://github.com/meevilabs/react-native-elements/workflows/check/badge.svg
 
 Welcome to the builder ui package here you will find out all of our components shared with the community
 
