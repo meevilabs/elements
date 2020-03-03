@@ -3,8 +3,10 @@
 [![Build Status][check-badge]][workflows]
 [![npm][npm-badge]][npm]
 [![react-native][rn-badge]][rn]
+![react-native][deps-badge]
 [![MIT][license-badge]][license]
 
+[deps-badge]: https://david-dm.org/meevilabs/react-native-elements.svg
 [npm-badge]: https://img.shields.io/npm/v/@meevilabs/react-native-elements.svg
 [npm]: https://www.npmjs.com/package/@meevilabs/react-native-elements
 [rn]: https://facebook.github.io/react-native
