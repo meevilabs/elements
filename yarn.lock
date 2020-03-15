@@ -559,10 +559,10 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@platformbuilders/helpers@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@platformbuilders/helpers/-/helpers-0.0.18.tgz#e50bc3b4c1351e596de30ca179e3271229d29872"
-  integrity sha512-nV4i0JUNBZ7DG5MCiqpZK00Nm9s+rKv6CNngWllG0Q6cvq4ZQjrXlHswbxe38r6WJnxPSM9AUR2R7zzndV7Aew==
+"@platformbuilders/helpers@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@platformbuilders/helpers/-/helpers-0.0.19.tgz#a8d8c61778e324a1077a841df8a56fca632febae"
+  integrity sha512-vh94GVqNduxq5SEfDnpu4y6Ao39kZs0YeiKsWi8SWQ6Djq+DpzN7wK45huuEuIpg+uqIdpay2NnxB2krvbGYQA==
   dependencies:
     lodash "^4.17.15"
     moment "^2.24.0"
