@@ -547,7 +547,7 @@
     jest-runner "^25.2.7"
     jest-runtime "^25.2.7"
 
-"@jest/transform@^25.1.0", "@jest/transform@^25.2.6":
+"@jest/transform@^25.2.6":
   version "25.2.6"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-25.2.6.tgz#007fd946dedf12d2a9eb5d4154faf1991d5f61ff"
   integrity sha512-rZnjCjZf9avPOf9q/w9RUZ9Uc29JmB53uIXNJmNz04QbDMD5cR/VjfikiMKajBsXe2vnFl5sJ4RTt+9HPicauQ==
@@ -2486,9 +2486,9 @@ eslint-config-airbnb-base@^14.1.0:
     object.entries "^1.1.1"
 
 eslint-config-airbnb-typescript@^7.0.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-7.2.0.tgz#afa7cea5657c9f70c0b96d52bf7d470e9827b66a"
-  integrity sha512-W7IZUIJpBZIzU3p65KoyJPl2vGSy6FS3R+K91Cp3NLK/0m1oyvCFeBHI2QlWdqxkJ4FvwnLvsoRTutwpKNIT+A==
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-7.2.1.tgz#bce3f02fa894d1ec2f31ac527992e03761a9b7d4"
+  integrity sha512-D3elVKUbdsCfkOVstSyWuiu+KGCVTrYxJPoenPIqZtL6Li/R4xBeVTXjZIui8B8D17bDN3Pz5dSr7jRLY5HqIg==
   dependencies:
     "@typescript-eslint/parser" "^2.24.0"
     eslint-config-airbnb "^18.1.0"
@@ -4073,7 +4073,7 @@ jest-snapshot@^25.2.7:
     pretty-format "^25.2.6"
     semver "^6.3.0"
 
-jest-util@^25.1.0, jest-util@^25.2.6:
+jest-util@^25.2.6:
   version "25.2.6"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-25.2.6.tgz#3c1c95cdfd653126728b0ed861a86610e30d569c"
   integrity sha512-gpXy0H5ymuQ0x2qgl1zzHg7LYHZYUmDEq6F7lhHA8M0eIwDB2WteOcCnQsohl9c/vBKZ3JF2r4EseipCZz3s4Q==
