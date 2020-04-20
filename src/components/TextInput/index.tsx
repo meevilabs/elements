@@ -58,6 +58,7 @@ const AnimatedTextInput: FC<Props> = ({
         Animated.timing(labelAnimatedStyle[animationProp], {
           toValue: updatedLabelStyle[animationProp],
           duration: 200,
+          useNativeDriver: false,
         }),
       );
       Animated.parallel(animations).start();
