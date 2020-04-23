@@ -13,10 +13,15 @@ interface Props {
 const Avatar: FC<Props> = ({
   image = defaultAvatar,
   size = 50,
-  onPress = (): void => {},
+  onPress = null,
   ...rest
 }) => (
-  <Wrapper size={size} onPress={onPress} disabled={!onPress} {...rest}>
+  <Wrapper
+    size={size}
+    onPress={onPress || ((): void => {})}
+    disabled={!onPress}
+    {...rest}
+  >
     <Image source={{ uri: image }} />
   </Wrapper>
 );

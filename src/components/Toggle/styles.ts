@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Switch } from 'react-native';
+import { Switch as DefaultSwitch } from 'react-native';
 import Typography from '../Typography';
 import { getTheme } from '../../helpers';
 
@@ -11,7 +11,7 @@ export const Wrapper = styled.View`
   justify-content: space-between;
 `;
 
-export const Toggle = styled(Switch).attrs((props) => ({
+export const Switch = styled(DefaultSwitch).attrs((props) => ({
   trackColor: toggleColors(props),
 }))``;
 
