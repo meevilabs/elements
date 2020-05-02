@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import Animation from 'lottie-react-native';
 import { moderateScale } from 'react-native-size-matters';
-import { getTheme } from '../../helpers';
+import { getTheme, ifStyle } from '../../helpers';
 import { AnimationObject, LoadingVariants } from '../../types';
 import { LoadingCircle as DefaultLoading } from '../../assets/animations';
 
