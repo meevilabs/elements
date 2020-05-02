@@ -5,7 +5,7 @@ export { default as KeyboardAvoidingView } from './KeyboardAvoidingView';
 
 // Inputs
 export { default as TextInput } from './TextInput';
-export { default as PasswordInput } from './TextInputPassword';
+export { default as PasswordInput } from './PasswordInput';
 export { default as FormError } from './FormError';
 export { default as FormContainer } from './FormContainer';
 

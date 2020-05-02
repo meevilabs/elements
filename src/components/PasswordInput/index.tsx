@@ -1,6 +1,6 @@
 import React, { useState, FC, useCallback } from 'react';
 import { Input as TextInputType } from '../../types';
-import { TextInput } from '../index';
+import TextInput from '../TextInput';
 
 const PasswordInput: FC<TextInputType> = (props) => {
   const [hidePassword, setHidePassword] = useState<boolean>(true);
