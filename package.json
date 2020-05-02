@@ -22,7 +22,7 @@
   "private": false,
   "scripts": {
     "clean": "rm -rf ./node_modules && yarn install",
-    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.js\"",
+    "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "lint": "tsc && eslint 'src/**/*.{js,ts,tsx}' --fix",
     "test": "jest",
     "build": "rm -rf dist && tsc",
@@ -33,7 +33,7 @@
     "version:major": "npm version major"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.ts": [
       "yarn pretty",
       "yarn lint",
       "git add ."
