@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import Touchable from '../Touchable';
-import { Variants } from '../../types';
+import { TypographyVariants } from '../../types';
 import { Text } from './styles';
 
 interface Props {
-  variant?: Variants;
+  variant?: TypographyVariants;
   onPress(): void;
   children: string | string[];
 }

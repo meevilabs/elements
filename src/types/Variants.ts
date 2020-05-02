@@ -1,4 +1,4 @@
-export type Variants =
+export type TypographyVariants =
   | 'largeTitle'
   | 'title1'
   | 'title2'
@@ -10,3 +10,5 @@ export type Variants =
   | 'footnote'
   | 'caption1'
   | 'caption2';
+
+export type LoadingVariants = 'linear' | 'circular' | 'button';

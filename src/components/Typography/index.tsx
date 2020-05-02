@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { human } from 'react-native-typography';
 import { withTheme } from 'styled-components';
-import { Typography as TypographyType } from '../../types';
+import { TypographyType } from '../../types';
 import { Text } from './styles';
 
 const Typography: FC<TypographyType> = ({
