@@ -1,6 +1,6 @@
 import { FormikErrors } from 'formik';
 
-export type FormError =
+export type FormErrorType =
   | string
   | string[]
   | FormikErrors<any>

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Touchable as TouchableType } from '../../types';
+import { TouchableType } from '../../types';
 import { generateHaptic } from '../../helpers';
 import { Wrapper, TouchAnimation } from './styles';
 

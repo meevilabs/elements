@@ -2,7 +2,7 @@ import {
   TextInputMaskTypeProp,
   TextInputMaskOptionProp,
 } from 'react-native-masked-text';
-import { FormError } from './FormError';
+import { FormErrorType } from './FormErrorType';
 
 type KeyboardType =
   | 'default'
@@ -58,7 +58,7 @@ export interface Input {
   maskType?: TextInputMaskTypeProp | null;
   options?: TextInputMaskOptionProp;
   status?: string;
-  error?: FormError;
+  error?: FormErrorType;
   iconHitSlop?: object;
   style?: any;
   textStyle?: any;

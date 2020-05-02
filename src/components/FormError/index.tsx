@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { FormError as FormErrorType } from '../../types';
+import { FormErrorType } from '../../types';
 import { ErrorText } from './styles';
 
 interface Props {

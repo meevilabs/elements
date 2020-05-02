@@ -1,6 +1,6 @@
 import { HapticFeedback } from './HapticFeedback';
 
-export interface Touchable {
+export type TouchableType = {
   children: JSX.Element | JSX.Element[] | string | string[];
   onPress(arg?: any): any;
   sound?: boolean;
@@ -13,4 +13,4 @@ export interface Touchable {
     left?: number;
     right?: number;
   };
-}
+};
