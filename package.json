@@ -53,7 +53,7 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@platformbuilders/helpers": "^0.1.1",
+    "@platformbuilders/helpers": "^0.0.19",
     "@types/react-native-actionsheet": "^2.4.1",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
