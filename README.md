@@ -28,19 +28,13 @@ Right now it's under early development stage, so hope it won't be a walk in the 
 
 Here's how you add our dependencie to your project @meevilabs/react-native-elements
 
-1. Create a `.yarnrc` file and add this:
-
-```
-"@meevilabs:registry" "https://npm.pkg.github.com"
-```
-
-2. Depend on it:
+1. Depend on it:
 
 ```
 yarn add @meevilabs/react-native-elements
 ```
 
-3. Import:
+2. Import:
 
 ```
 import { Button } from '@meevilabs/react-native-elements'
