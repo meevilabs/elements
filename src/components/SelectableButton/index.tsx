@@ -19,6 +19,7 @@ const SelectableButton: FC<Props> = ({
     onPress={onPress}
     isDisabled={disabled}
     isSelected={selected}
+    disabled={disabled}
     {...rest}
   >
     <Label isSelected={selected}>{children}</Label>
