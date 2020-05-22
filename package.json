@@ -1,6 +1,6 @@
 {
   "name": "@meevilabs/react-native-elements",
-  "version": "0.0.22",
+  "version": "0.0.30",
   "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,6 +45,7 @@
     }
   },
   "peerDependencies": {
+    "lottie-react-native": ">= 3.3.2",
     "react": ">=16.11.0",
     "react-native": ">=0.61.0",
     "react-native-camera": ">=3.19.0",
@@ -53,11 +54,10 @@
     "styled-components": ">=5"
   },
   "dependencies": {
-    "@platformbuilders/helpers": "^0.0.19",
+    "@platformbuilders/helpers": "^0.2.0",
     "@types/react-native-actionsheet": "^2.4.1",
     "formik": "^2.1.4",
     "lodash": "^4.17.15",
-    "lottie-react-native": "^3.3.2",
     "polished": "^3.5.2",
     "react-native-actionsheet": "^2.4.2",
     "react-native-datepicker": "^1.7.2",
