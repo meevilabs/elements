@@ -3,14 +3,14 @@ import { Animated } from 'react-native';
 import { ifStyle, switchStyle, getTheme } from '../../helpers';
 import { Input as TextInputType, InputStatus } from '../../types';
 
-interface InputAreaWrapperProps {
+type InputAreaWrapperProps = {
   multiline: boolean;
-}
+};
 
-interface BottomLineProps {
+type BottomLineProps = {
   contrast: boolean;
   status: string;
-}
+};
 
 const normalTextSize = 16;
 const bigTextSize = 24;
@@ -48,9 +48,6 @@ interface WrapperProps {
 }
 
 export const Wrapper = styled.View<WrapperProps>`
-  height: ${hasLabel(isMultiline('auto', '89px'), '32px')};
-  max-height: ${hasLabel(isMultiline('auto', '89px'), '32px')};
-  min-height: ${hasLabel(isMultiline('89px', 'auto'), '32px')};
   justify-content: ${hasLabel('flex-end', 'flex-start')};
   padding-top: 8px;
   position: relative;
