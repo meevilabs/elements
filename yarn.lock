@@ -5557,9 +5557,9 @@ react-native-masked-text@^1.13.0:
     tinymask "1.0.2"
 
 react-native-simple-dialogs@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-1.2.1.tgz#37f63243b7c91ba303eeb3d8f2ba23eb81fb6926"
-  integrity sha512-oceCB2LCXP0HiIbOvddXIbJr+Cv7xL43U0H3YiySRpMlz/7EWu87mMbTgmfrNbb5uhw+k1tnDuzjqqrArAKy9w==
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-1.3.0.tgz#d6fd7b86fb24b92d6324acb10e9eeb50b42c0c4f"
+  integrity sha512-xe1dAcDXXypwecy5PUicfgPColkV5PRbITGK6TcYmt/s4D4cVmaiPzVkexDXoJHzQN6qLWQt0gXFjmOHmboWzQ==
 
 react-native-size-matters@^0.3.0:
   version "0.3.0"
