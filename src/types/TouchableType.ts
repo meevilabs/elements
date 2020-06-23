@@ -1,7 +1,6 @@
 import { HapticFeedback } from './HapticFeedback';
 
 export type TouchableType = {
-  children: JSX.Element | JSX.Element[] | string | string[];
   onPress(arg?: any): any;
   sound?: boolean;
   disabled?: boolean;

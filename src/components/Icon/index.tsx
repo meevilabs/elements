@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Animated, View } from 'react-native';
+import { Animated, View, ViewStyle, StyleProp } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
 import { IconSets } from '../../types';
 import Touchable from '../Touchable';
 import * as Icons from '../../assets/svg';
 
-interface Props {
+type Props = {
   name: string;
   onPress?(): void;
   touchable?: boolean;
@@ -15,14 +15,14 @@ interface Props {
   iconSet?: IconSets;
   borderColor?: string;
   backgroundColor?: string;
-  style?: object[];
+  style?: StyleProp<ViewStyle> | any;
   hitSlop?: {
     top?: number;
     bottom?: number;
     left?: number;
     right?: number;
   };
-}
+};
 
 export default class Icon extends PureComponent<Props> {
   renderIconSet = (): JSX.Element => {
@@ -47,7 +47,7 @@ export default class Icon extends PureComponent<Props> {
       name,
       onPress = (): void => {},
       size = 20,
-      style = {},
+      style,
       touchable = true,
       color = undefined,
       borderColor = '',

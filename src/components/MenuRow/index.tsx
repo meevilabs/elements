@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Wrapper, Right, ChevronIcon, Title, Description } from './styles';
 
-interface Props {
+type Props = {
   label: string;
   onPress(): void;
   description?: string;
   renderRight?: JSX.Element;
-}
+};
 
 const MenuRow: FC<Props> = ({
   onPress,

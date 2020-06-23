@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import { Wrapper } from './styles';
 
-interface Props {
+type Props = {
   title?: string;
   persist?: boolean;
   visible: boolean;
   onClose(): void;
-}
+  children: React.ComponentType<any>;
+};
 
 const Dialog: FC<Props> = ({
   title = '',

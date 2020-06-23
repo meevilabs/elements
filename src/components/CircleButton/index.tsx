@@ -13,7 +13,7 @@ const iconSmallSize = 24;
 
 type Animations = 'stiff' | 'gentle' | 'wobbly';
 
-interface Props {
+type Props = {
   onPress(): any;
   children?: JSX.Element | string;
   icon?: string;
@@ -26,7 +26,7 @@ interface Props {
   iconColor?: string;
   iconSet?: IconSets;
   animation?: Animations;
-}
+};
 
 class CircleButton extends Component<Props> {
   state = {

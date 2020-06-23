@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Wrapper, Button, Separator, Icon } from './styles';
 
-interface Props {
+type Props = {
   handleDecrement(): void;
   handleIncrement(): void;
   decrementDisabled?: boolean;
   incrementDisabled?: boolean;
-}
+};
 
 const Stepper: FC<Props> = ({
   handleDecrement,

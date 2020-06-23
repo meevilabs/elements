@@ -2,15 +2,14 @@ import React, { FC } from 'react';
 import { Formik as FormBehavior } from 'formik';
 import { Wrapper } from './styles';
 
-interface Props {
-  style?: any;
+type Props = {
   onSubmit(values: any, actions: any): any;
   validationSchema?: any;
-  initialValues: object;
+  initialValues: Record<string, any>;
   validateOnChange?: boolean;
   enableReinitialize?: boolean;
   avoidKeyboard?: boolean;
-}
+};
 
 const FormContainer: FC<Props> = ({
   initialValues,
@@ -20,9 +19,9 @@ const FormContainer: FC<Props> = ({
   validateOnChange = false,
   enableReinitialize = false,
   avoidKeyboard = true,
-  style = [{}],
+  ...rest
 }) => (
-  <Wrapper enabled={avoidKeyboard} style={style}>
+  <Wrapper enabled={avoidKeyboard} {...rest}>
     <FormBehavior
       enableReinitialize={enableReinitialize}
       validateOnChange={validateOnChange}

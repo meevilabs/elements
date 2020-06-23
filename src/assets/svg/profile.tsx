@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import Svg, { Path } from 'react-native-svg';
 
-interface Props {
+type Props = {
   color: string;
   width: number;
   height: number;
-}
+};
 
 const Profile: FC<Props> = ({ color = '#212121', width = 18, height = 18 }) => (
   <Svg width={width} height={height} viewBox="0 0 16 16" fill="none">

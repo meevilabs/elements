@@ -3,11 +3,11 @@ import Touchable from '../Touchable';
 import { TypographyVariants } from '../../types';
 import { Text } from './styles';
 
-interface Props {
+type Props = {
   variant?: TypographyVariants;
   onPress(): void;
   children: string | string[];
-}
+};
 
 const Link: FC<Props> = ({ onPress, children, variant = 'body', ...rest }) => (
   <Touchable onPress={onPress} {...rest}>

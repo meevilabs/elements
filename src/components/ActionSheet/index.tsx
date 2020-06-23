@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import DefaultSheet from 'react-native-actionsheet';
 
-interface Props {
+type Props = {
   handlePress(index: number): void;
   options: string[];
   title?: string;
   cancelIndex?: number;
   destructiveIndex?: number;
-}
+};
 
 class ActionSheet extends Component<Props> {
   sheetRef: React.RefObject<DefaultSheet> = React.createRef();

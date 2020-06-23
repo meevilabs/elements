@@ -1,4 +1,6 @@
-export interface ButtonType {
+import { StyleProp, ViewStyle, TextStyle } from 'react-native';
+
+export type ButtonType = {
   children: string;
   disabled?: boolean;
   rounded?: boolean;
@@ -7,10 +9,10 @@ export interface ButtonType {
   loading?: boolean;
   sound?: boolean;
   active?: boolean;
-  style?: object[];
-  textStyle?: object | object[];
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
   onPress?(): void;
   iconSize?: number;
   icon?: string;
   iconColor?: string;
-}
+};

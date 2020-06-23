@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Wrapper, Label } from './styles';
 
-interface Props {
+type Props = {
   onPress(arg: any): void;
   children: string | string[];
   selected?: boolean;
   style?: any;
-}
+};
 
 const SelectableFlatButton: FC<Props> = ({
   onPress,

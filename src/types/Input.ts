@@ -59,7 +59,12 @@ export interface Input {
   options?: TextInputMaskOptionProp;
   status?: string;
   error?: FormErrorType;
-  iconHitSlop?: object;
+  iconHitSlop?: {
+    top?: number;
+    bottom?: number;
+    left?: number;
+    right?: number;
+  };
   style?: any;
   textStyle?: any;
   labelStyle?: any;

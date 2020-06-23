@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 
-interface Props {
+type Props = {
   enabled?: boolean;
   children: ReactNode;
-}
+};
 
 const DismissKeyboardView: FC<Props> = ({ children, enabled = true }) => (
   <TouchableWithoutFeedback

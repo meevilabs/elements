@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Wrapper } from './styles';
 
-interface Props {
+type Props = {
   children: JSX.Element;
-}
+};
 
 const Shadow: FC<Props> = ({ children, ...rest }) => (
   <Wrapper {...rest}>{children}</Wrapper>
