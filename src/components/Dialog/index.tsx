@@ -6,7 +6,7 @@ type Props = {
   persist?: boolean;
   visible: boolean;
   onClose(): void;
-  children: React.ComponentType<any>;
+  children: any;
 };
 
 const Dialog: FC<Props> = ({
