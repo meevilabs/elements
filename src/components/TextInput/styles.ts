@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import { Animated } from 'react-native';
+import { moderateScale } from 'react-native-size-matters';
 import { ifStyle, switchStyle, getTheme } from '../../helpers';
 import { Input as TextInputType, InputStatus } from '../../types';
 
@@ -43,13 +44,16 @@ export const LABEL_LOWER_STYLE = {
   fontSize: 18,
 };
 
-interface WrapperProps {
+type WrapperProps = {
   multiline: boolean;
-}
+};
 
 export const Wrapper = styled.View<WrapperProps>`
+  height: ${hasLabel(isMultiline('auto', '89px'), '32px')};
+  max-height: ${hasLabel(isMultiline('auto', '89px'), '32px')};
+  min-height: ${hasLabel(isMultiline('89px', 'auto'), '32px')};
   justify-content: ${hasLabel('flex-end', 'flex-start')};
-  padding-top: 8px;
+  padding-top: ${moderateScale(8)}px;
   position: relative;
   justify-content: ${hasLabel('flex-end', 'flex-start')};
 `;
@@ -58,8 +62,6 @@ export const InputAreaWrapper = styled.View<InputAreaWrapperProps>`
   margin-top: 6px;
   margin-bottom: 9px;
   flex-direction: row;
-  min-height: 24px;
-  max-height: ${isMultiline('auto', '24px')};
 `;
 
 export const TextLabel = styled.Text<TextInputType>`
@@ -86,8 +88,8 @@ export const TextInput = styled.TextInput.attrs((props: TextInputType) => ({
   font-weight: 700;
   color: ${inputColor};
   margin-top: ${isMultiline('16px', '0px')};
-  max-height: ${isMultiline('150px', '24px')};
   font-size: ${isBig(bigTextSize, normalTextSize)}px;
+  padding-vertical: 0;
 `;
 
 export const BottomLine = styled.View<BottomLineProps>`
