@@ -1,8 +1,6 @@
-type Behavior = 'height' | 'position' | 'padding' | undefined;
+import { KeyboardAvoidingViewProps } from 'react-native';
 
-export interface KeyboardAvoiding {
-  behavior?: Behavior;
+export interface KeyboardAvoiding extends KeyboardAvoidingViewProps {
   enabled?: boolean;
   keyboardOffset?: number;
-  style?: any;
 }
