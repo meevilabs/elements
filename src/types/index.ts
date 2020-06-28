@@ -1,6 +1,6 @@
 export * from './Colors';
 export * from './ThemeType';
-export * from './Metrics';
+export * from './Spacings';
 export * from './Radius';
 export * from './IconSets';
 export * from './Variants';

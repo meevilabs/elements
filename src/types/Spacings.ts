@@ -1,4 +1,4 @@
-export type Metrics = {
+export interface Spacings {
   headerSpacing: string;
   sceneSpacing: string;
   smallSpacing: string;
@@ -9,4 +9,4 @@ export type Metrics = {
   statusHeight: string;
   screenWidth: number;
   screenHeight: number;
-};
+}

@@ -1,5 +1,4 @@
-import colors from './colors';
-import metrics from './metrics';
-import animations from './animations';
-
-export { colors, metrics, animations };
+export { default as colors } from './colors';
+export { default as spacings } from './spacings';
+export { default as radius } from './radius';
+export { default as animations } from './animations';
