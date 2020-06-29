@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Animated, View, ViewStyle, StyleProp } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
 import { IconSets } from '../../types';
 import Touchable from '../Touchable';
 import * as Icons from '../../assets/svg';
@@ -25,23 +24,6 @@ type Props = {
 };
 
 export default class Icon extends PureComponent<Props> {
-  renderIconSet = (): JSX.Element => {
-    const { iconSet = 'material', name, size, color } = this.props;
-    let IconSet;
-    switch (iconSet) {
-      case 'material':
-        IconSet = MaterialIcons;
-        break;
-      case 'fontAwesome':
-        IconSet = FontAwesomeIcons;
-        break;
-      default:
-        IconSet = MaterialIcons;
-        break;
-    }
-    return <IconSet name={name} size={size} color={color} />;
-  };
-
   render(): JSX.Element {
     const {
       name,
@@ -69,7 +51,7 @@ export default class Icon extends PureComponent<Props> {
                 backgroundColor={backgroundColor}
               />
             ) : (
-              this.renderIconSet()
+              <MaterialIcons name={name} size={size} color={color} />
             )}
           </View>
         </Touchable>

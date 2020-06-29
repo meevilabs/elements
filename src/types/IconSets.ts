@@ -1,1 +1,1 @@
-export type IconSets = 'material' | 'fontAwesome';
+export type IconSets = 'material';

@@ -9,7 +9,7 @@ const mediumSpacing = getTheme('mediumSpacing');
 const primaryMain = getTheme('primary.main');
 const primaryContrast = getTheme('primary.contrast');
 
-export const Icon = styled(DefaultIcon).attrs({ iconSet: 'fontAwesome' })`
+export const Icon = styled(DefaultIcon)`
   margin-right: ${mediumSpacing};
 `;
 
