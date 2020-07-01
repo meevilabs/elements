@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { scale, moderateScale } from 'react-native-size-matters';
 import TouchableComponent from '../Touchable';
 import DefaultIcon from '../Icon';
 import Typography from '../Typography';
@@ -8,36 +9,40 @@ const smallSpacing = getTheme('smallSpacing');
 const mediumSpacing = getTheme('mediumSpacing');
 const primaryMain = getTheme('primary.main');
 const primaryContrast = getTheme('primary.contrast');
+const buttonRadius = getTheme('buttonRadius');
 
 export const Icon = styled(DefaultIcon)`
   margin-right: ${mediumSpacing};
 `;
 
-interface TouchableProps {
+type TouchableProps = {
   rounded?: boolean;
-}
+};
 export const Touchable = styled(TouchableComponent)`
   border-radius: ${(props: TouchableProps): any =>
     props.rounded ? '50px' : '0'};
 `;
 
-interface ButtonWrapperProps {
+type ButtonWrapperProps = {
   rounded?: boolean;
   tertiary?: boolean;
   secondary?: boolean;
   disabled?: boolean;
   active?: boolean;
-}
+};
 
 export const ButtonWrapper = styled.View<ButtonWrapperProps>`
-  height: 48px;
   flex-direction: row;
-  border: 2px solid;
   align-items: center;
-  margin-vertical: ${smallSpacing};
-  padding: ${(props): string => (props.rounded ? '0' : '13px 14px')};
-  border-radius: ${(props): string => (props.rounded ? '50px' : '4px')}
   justify-content: center;
+  width: ${scale(175)}px;
+  height: ${moderateScale(48)}px;
+  border: ${(props): string => (props.tertiary ? '2px solid' : '0px')};
+  margin-vertical: ${smallSpacing};
+  padding: ${(props): string =>
+    props.rounded ? '0' : `${moderateScale(11)}px`};
+  border-radius: ${(props): string =>
+    props.rounded ? '50px' : buttonRadius(props)}
   background-color: ${(props): any =>
     props.tertiary
       ? 'transparent'
@@ -50,9 +55,9 @@ export const ButtonWrapper = styled.View<ButtonWrapperProps>`
       : 'transparent'};
 `;
 
-interface ButtonTextProps {
+type ButtonTextProps = {
   secondary: boolean;
-}
+};
 
 export const ButtonText = styled(Typography).attrs({ variant: 'subhead' })<
   ButtonTextProps

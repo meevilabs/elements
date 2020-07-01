@@ -7,7 +7,7 @@ import { Icon, Touchable, ButtonWrapper, ButtonText } from './styles';
 const shadowStyle = {
   shadowColor: '#212121',
   shadowOffset: { width: 1, height: 1 },
-  shadowOpacity: 0.5,
+  shadowOpacity: 0.666,
   shadowRadius: 2,
   elevation: 2,
 };
