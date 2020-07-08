@@ -1,20 +1,11 @@
 import React, { FC } from 'react';
 import LoadingIndicator from '../LoadingIndicator';
-import { isIOS } from '../../helpers';
 import { ButtonType } from '../../types';
 import { Icon, Touchable, ButtonWrapper, ButtonText } from './styles';
 
-const shadowStyle = {
-  shadowColor: '#212121',
-  shadowOffset: { width: 1, height: 1 },
-  shadowOpacity: 0.666,
-  shadowRadius: 2,
-  elevation: 2,
-};
-
 const Button: FC<ButtonType> = ({
+  children,
   style = {},
-  children = '',
   textStyle = {},
   active = false,
   secondary = false,
@@ -31,7 +22,7 @@ const Button: FC<ButtonType> = ({
     <ButtonWrapper
       secondary={secondary}
       tertiary={tertiary}
-      style={[style, !rounded && isIOS() && shadowStyle]}
+      style={style}
       disabled={disabled}
       active={active}
       rounded={rounded}
@@ -48,9 +39,11 @@ const Button: FC<ButtonType> = ({
               touchable={false}
             />
           )}
-          <ButtonText secondary={secondary} style={textStyle}>
-            {children.toUpperCase()}
-          </ButtonText>
+          {children && (
+            <ButtonText secondary={secondary} style={textStyle}>
+              {children}
+            </ButtonText>
+          )}
         </>
       )}
     </ButtonWrapper>

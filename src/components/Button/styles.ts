@@ -6,14 +6,11 @@ import Typography from '../Typography';
 import { getTheme } from '../../helpers';
 
 const smallSpacing = getTheme('smallSpacing');
-const mediumSpacing = getTheme('mediumSpacing');
 const primaryMain = getTheme('primary.main');
 const primaryContrast = getTheme('primary.contrast');
 const buttonRadius = getTheme('buttonRadius');
 
-export const Icon = styled(DefaultIcon)`
-  margin-right: ${mediumSpacing};
-`;
+export const Icon = styled(DefaultIcon)``;
 
 type TouchableProps = {
   rounded?: boolean;
@@ -39,8 +36,10 @@ export const ButtonWrapper = styled.View<ButtonWrapperProps>`
   height: ${moderateScale(48)}px;
   border: ${(props): string => (props.tertiary ? '2px solid' : '0px')};
   margin-vertical: ${smallSpacing};
-  padding: ${(props): string =>
+  padding-vertical: ${(props): string =>
     props.rounded ? '0' : `${moderateScale(11)}px`};
+  padding-horizontal: ${(props): string =>
+    props.rounded ? '0' : `${moderateScale(15)}px`};
   border-radius: ${(props): string =>
     props.rounded ? '50px' : buttonRadius(props)}
   background-color: ${(props): any =>
