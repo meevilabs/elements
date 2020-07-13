@@ -1,6 +1,6 @@
 {
   "name": "@meevilabs/react-native-elements",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -57,7 +57,7 @@
     "@platformbuilders/helpers": "^0.2.1",
     "@types/react-native-actionsheet": "^2.4.1",
     "formik": "^2.1.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "polished": "^3.6.5",
     "react-native-actionsheet": "^2.4.2",
     "react-native-datepicker": "^1.7.2",
@@ -82,8 +82,8 @@
     "@types/lodash": "^4.14.157",
     "@types/moment": "^2.13.0",
     "@types/numeral": "^0.0.28",
-    "@types/react": "^16.9.41",
-    "@types/react-native": "^0.62.17",
+    "@types/react": "^16.9.43",
+    "@types/react-native": "^0.62.18",
     "@types/react-native-check-box": "^2.1.1",
     "@types/react-native-datepicker": "^1.7.0",
     "@types/react-native-vector-icons": "^6.4.5",
@@ -109,7 +109,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.5",
+    "eslint-plugin-react-hooks": "^4.0.7",
     "eslint-plugin-react-native": "^3.8.1",
     "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.2.5",
@@ -121,7 +121,7 @@
     "react-native-size-matters": "^0.3.0",
     "react-native-svg": "^12.1.0",
     "styled-components": "^5.1.1",
-    "ts-jest": "^26.1.1",
+    "ts-jest": "^26.1.2",
     "typescript": "^3.9.6"
   }
 }
