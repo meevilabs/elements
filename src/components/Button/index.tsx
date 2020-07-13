@@ -37,6 +37,7 @@ const Button: FC<ButtonType> = ({
               name={icon}
               color={iconColor}
               touchable={false}
+              hasChildren={!!children}
             />
           )}
           {children && (

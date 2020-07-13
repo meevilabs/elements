@@ -1,6 +1,6 @@
 {
   "name": "@meevilabs/react-native-elements",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Meevi's RN Elements Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -10,7 +10,13 @@ const primaryMain = getTheme('primary.main');
 const primaryContrast = getTheme('primary.contrast');
 const buttonRadius = getTheme('buttonRadius');
 
-export const Icon = styled(DefaultIcon)``;
+type IconProps = {
+  hasChildren: boolean;
+};
+
+export const Icon = styled(DefaultIcon)<IconProps>`
+  margin-right: ${(props) => (props.hasChildren ? `${scale(4)}px` : '0px')};
+`;
 
 type TouchableProps = {
   rounded?: boolean;
