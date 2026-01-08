@@ -74,14 +74,18 @@ export const TextLabel = styled.Text<TextInputType>`
 `;
 export const Label = Animated.createAnimatedComponent(TextLabel);
 
-export const TextInput = styled.TextInput.attrs((props: TextInputType) => ({
-  selectionColor: props.contrast
-    ? `${primaryContrast(props)}80`
-    : `${primaryDark(props)}80`,
-  placeholderTextColor: props.contrast
-    ? `${primaryContrast(props)}60`
-    : `${primaryDark(props)}60`,
-}))<TextInputType>`
+export const TextInput = styled.TextInput.attrs((props: TextInputType) => {
+  const contrastColor = primaryContrast(props) || '#ffffff';
+  const darkColor = primaryDark(props) || '#000000';
+  return {
+    selectionColor: props.contrast
+      ? `${contrastColor}80`
+      : `${darkColor}80`,
+    placeholderTextColor: props.contrast
+      ? `${contrastColor}60`
+      : `${darkColor}60`,
+  };
+})<TextInputType>`
   padding: 0;
   flex-grow: 1;
   border-width: 0;
