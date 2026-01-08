@@ -9,6 +9,12 @@ const primaryMain = getTheme('primary.main');
 const primaryContrast = getTheme('primary.contrast');
 const buttonRadius = getTheme('buttonRadius');
 
+// Fallback helpers
+const getSmallSpacing = (props: any) => smallSpacing(props) || '8px';
+const getPrimaryMain = (props: any) => primaryMain(props) || '#6200ee';
+const getPrimaryContrast = (props: any) => primaryContrast(props) || '#fff';
+const getButtonRadius = (props: any) => buttonRadius(props) || '4px';
+
 type IconProps = {
   hasChildren: boolean;
 };
@@ -40,22 +46,22 @@ export const ButtonWrapper = styled.View<ButtonWrapperProps>`
   width: 175px;
   height: 48px;
   border: ${(props): string => (props.tertiary ? '2px solid' : '0px')};
-  margin-vertical: ${smallSpacing};
+  margin-vertical: ${getSmallSpacing};
   padding-vertical: ${(props): string =>
     props.rounded ? '0' : '11px'};
   padding-horizontal: ${(props): string =>
     props.rounded ? '0' : '15px'};
   border-radius: ${(props): string =>
-    props.rounded ? '50px' : buttonRadius(props)}
+    props.rounded ? '50px' : getButtonRadius(props)};
   background-color: ${(props): any =>
     props.tertiary
       ? 'transparent'
       : props.secondary
-      ? primaryContrast
-      : primaryMain};
+      ? getPrimaryContrast(props)
+      : getPrimaryMain(props)};
   border-color: ${(props): any =>
     props.rounded || (props.tertiary && !props.active)
-      ? primaryContrast
+      ? getPrimaryContrast(props)
       : 'transparent'};
 `;
 
@@ -66,6 +72,6 @@ type ButtonTextProps = {
 export const ButtonText = styled(Typography).attrs({ variant: 'subhead' })<
   ButtonTextProps
 >`
-  color: ${({ secondary }): any => (secondary ? primaryMain : primaryContrast)};
+  color: ${(props): any => (props.secondary ? getPrimaryMain(props) : getPrimaryContrast(props))};
   font-weight: bold;
 `;
