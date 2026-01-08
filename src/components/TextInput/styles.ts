@@ -25,13 +25,15 @@ const primaryDark = getTheme('primary.dark');
 const success = getTheme('success');
 const failure = getTheme('failure');
 const disabled = getTheme('disabled');
-const inputColor = (props: TextInputType | BottomLineProps): any =>
-  switchStatus({
+const inputColor = (props: TextInputType | BottomLineProps): any => {
+  const statusColor = switchStatus({
     [InputStatus.Success]: success,
     [InputStatus.Failure]: failure,
     [InputStatus.Default]: isContrast(primaryContrast, primaryDark)(props),
     [InputStatus.Disabled]: disabled,
-  });
+  })(props);
+  return statusColor || (props.contrast ? '#fff' : '#000');
+};
 
 export const LABEL_UPPER_STYLE = {
   top: -10,
