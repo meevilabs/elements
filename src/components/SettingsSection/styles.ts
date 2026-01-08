@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import Typography from '../Typography';
+import { Text } from 'react-native';
 import { getTheme } from '../../helpers';
 
 const smallSpacing = getTheme('smallSpacing');
@@ -25,8 +25,9 @@ export const TitleWrapper = styled.View`
   padding-bottom: ${smallSpacing};
 `;
 
-export const Title = styled(Typography).attrs({ variant: 'subhead' })`
+export const Title = styled(Text)`
   color: ${sectionColor};
   font-weight: 500;
   opacity: 0.6;
+  font-size: 15px;
 `;
