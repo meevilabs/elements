@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import Animation from 'lottie-react-native';
-import { moderateScale } from 'react-native-size-matters';
 import { getTheme } from '../../helpers';
 import { AnimationObject, LoadingVariants } from '../../types';
 import { LoadingCircle as DefaultLoading } from '../../assets/animations';
@@ -29,13 +28,13 @@ const loadingVariant = (
 };
 
 export const smallSize = {
-  width: moderateScale(60),
-  height: moderateScale(60),
+  width: 60,
+  height: 60,
 };
 
 export const largeSize = {
-  width: moderateScale(120),
-  height: moderateScale(120),
+  width: 120,
+  height: 120,
 };
 
 export const Indicator = styled(Animation).attrs((props) => ({

@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { Animated } from 'react-native';
-import { moderateScale } from 'react-native-size-matters';
 import { ifStyle, switchStyle, getTheme } from '../../helpers';
 import { Input as TextInputType, InputStatus } from '../../types';
 
@@ -53,7 +52,7 @@ export const Wrapper = styled.View<WrapperProps>`
   max-height: ${hasLabel(isMultiline('auto', '89px'), '32px')};
   min-height: ${hasLabel(isMultiline('89px', 'auto'), '32px')};
   justify-content: ${hasLabel('flex-end', 'flex-start')};
-  padding-top: ${moderateScale(8)}px;
+  padding-top: 8px;
   position: relative;
   justify-content: ${hasLabel('flex-end', 'flex-start')};
 `;

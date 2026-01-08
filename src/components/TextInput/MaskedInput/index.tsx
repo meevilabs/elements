@@ -9,6 +9,7 @@ const MaskedTextInput: FC<MaskedTextInputType> = ({
   multiline = false,
   ...props
 }) => (
+  // @ts-expect-error - React types incompatibility
   <TextInput
     {...props}
     ref={inputRef}

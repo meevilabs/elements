@@ -39,6 +39,7 @@ export default class Icon extends PureComponent<Props> {
     const iconName = name.charAt(0).toUpperCase() + name.slice(1);
     const Svg = Icons[`Icon${iconName}`];
     return (
+      // @ts-expect-error - React types incompatibility
       <Animated.View style={style}>
         <Touchable disabled={!touchable} onPress={onPress} {...rest}>
           <View>

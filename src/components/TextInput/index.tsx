@@ -154,6 +154,7 @@ const AnimatedTextInput: FC<Props> = ({
   return (
     <Wrapper style={style} multiline={multiline}>
       <FormError error={error}>
+        {/* @ts-expect-error - React types incompatibility */}
         <Label
           status={status}
           contrast={contrast}

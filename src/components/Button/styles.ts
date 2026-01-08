@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { scale, moderateScale } from 'react-native-size-matters';
 import TouchableComponent from '../Touchable';
 import DefaultIcon from '../Icon';
 import Typography from '../Typography';
@@ -15,7 +14,7 @@ type IconProps = {
 };
 
 export const Icon = styled(DefaultIcon)<IconProps>`
-  margin-right: ${(props) => (props.hasChildren ? `${scale(4)}px` : '0px')};
+  margin-right: ${(props) => (props.hasChildren ? '4px' : '0px')};
 `;
 
 type TouchableProps = {
@@ -38,14 +37,14 @@ export const ButtonWrapper = styled.View<ButtonWrapperProps>`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: ${scale(175)}px;
-  height: ${moderateScale(48)}px;
+  width: 175px;
+  height: 48px;
   border: ${(props): string => (props.tertiary ? '2px solid' : '0px')};
   margin-vertical: ${smallSpacing};
   padding-vertical: ${(props): string =>
-    props.rounded ? '0' : `${moderateScale(11)}px`};
+    props.rounded ? '0' : '11px'};
   padding-horizontal: ${(props): string =>
-    props.rounded ? '0' : `${moderateScale(15)}px`};
+    props.rounded ? '0' : '15px'};
   border-radius: ${(props): string =>
     props.rounded ? '50px' : buttonRadius(props)}
   background-color: ${(props): any =>

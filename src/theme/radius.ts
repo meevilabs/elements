@@ -1,10 +1,9 @@
-import { moderateScale } from 'react-native-size-matters';
 import { Radius } from '../types';
 
 export default {
-  smallRadius: `${moderateScale(5)}px`,
-  mediumRadius: `${moderateScale(10)}px`,
-  largeRadius: `${moderateScale(16)}px`,
-  modalRadius: `${moderateScale(20)}px`,
-  buttonRadius: `${moderateScale(4)}px`,
+  smallRadius: '5px',
+  mediumRadius: '10px',
+  largeRadius: '16px',
+  modalRadius: '20px',
+  buttonRadius: '4px',
 } as Radius;

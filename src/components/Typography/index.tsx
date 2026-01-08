@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { human } from 'react-native-typography';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { TypographyType } from '../../types';
 import { Text } from './styles';
 
@@ -14,7 +14,7 @@ const Typography: FC<TypographyType> = ({
 }) => (
   <Text
     ref={textRef}
-    style={[human[variant], { color: theme.primary.contrast }, style]}
+    style={[human[variant], { color: theme?.primary?.contrast || '#000' }, style]}
     {...rest}
   >
     {children}
