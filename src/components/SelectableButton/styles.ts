@@ -1,12 +1,14 @@
 import styled from 'styled-components/native';
 import Touchable from '../Touchable';
 import Typography from '../Typography';
-import { getTheme, ifStyle } from '../../helpers';
+import { getTheme } from '../../helpers';
 
-const isSelected = ifStyle('isSelected');
-const isDisabled = ifStyle('isDisabled');
 const primaryContrast = getTheme('primary.contrast');
 const primaryDark = getTheme('primary.dark');
+
+// Fallback helpers
+const getPrimaryContrast = (props: any) => primaryContrast(props) || '#fff';
+const getPrimaryDark = (props: any) => primaryDark(props) || '#000';
 
 interface WrapperProps {
   isSelected: boolean;
@@ -18,8 +20,8 @@ export const Wrapper = styled(Touchable)<WrapperProps>`
   padding-horizontal: 8px;
   justify-content: center;
   align-items: center;
-  background-color: ${isSelected(primaryContrast, 'transparent')};
-  opacity: ${isDisabled(0.42, 1)};
+  background-color: ${(props: any) => props.isSelected ? getPrimaryContrast(props) : 'transparent'};
+  opacity: ${(props: any) => props.isDisabled ? 0.8 : 1};
 `;
 
 interface LabelProps {
@@ -27,5 +29,5 @@ interface LabelProps {
 }
 
 export const Label = styled(Typography)<LabelProps>`
-  color: ${isSelected(primaryDark, primaryContrast)};
+  color: ${(props: any) => props.isSelected ? getPrimaryDark(props) : getPrimaryContrast(props)};
 `;

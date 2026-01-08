@@ -14,7 +14,7 @@ const Typography: FC<TypographyType> = ({
 }) => (
   <Text
     ref={textRef}
-    style={[human[variant], { color: theme?.primary?.contrast || '#000' }, style]}
+    style={[human[variant], { color: theme?.primary?.contrast || '#fff' }, style]}
     {...rest}
   >
     {children}

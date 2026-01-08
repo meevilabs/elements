@@ -28,7 +28,7 @@ export const Wrapper = styled.View`
 export const Icon = styled((props) => (
   <DefaultIcon size={18} touchable={false} {...props} />
 )).attrs(({ theme }) => ({
-  color: theme.primary.contrast,
+  color: theme?.primary?.contrast || '#fff',
 }))`
   opacity: ${isDisabled('0.25', '1')};
 `;
