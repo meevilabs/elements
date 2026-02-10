@@ -6,6 +6,9 @@ import { getTheme } from '../../helpers';
 const labelColor = getTheme('primary.contrast');
 const toggleColors = getTheme('outcome.light');
 
+// Fallback helper
+const getLabelColor = (props: any) => labelColor(props) || '#fff';
+
 export const Wrapper = styled.View`
   flex-direction: row;
   justify-content: space-between;
@@ -16,5 +19,5 @@ export const Switch = styled(DefaultSwitch).attrs((props) => ({
 }))``;
 
 export const Label = styled(Typography)`
-  color: ${labelColor};
+  color: ${getLabelColor};
 `;
